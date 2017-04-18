@@ -1,0 +1,16 @@
+{
+  "name": "hanzi-to-pinyin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
+  "license": "ISC",
+  "dependencies": {
+    "find-hanzi": "git+https://git@github.com/pepebecker/find-hanzi.git",
+    "pinyin-utils": "git+https://git@github.com/pepebecker/pinyin-utils.git",
+    "so": "^1.0.1"
+  }
+}
