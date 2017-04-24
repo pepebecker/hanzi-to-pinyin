@@ -6,8 +6,16 @@
   "scripts": {
     "test": "node test/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepebecker/hanzi-to-pinyin.git"
+  },
   "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepebecker/hanzi-to-pinyin/issues"
+  },
+  "homepage": "https://github.com/pepebecker/hanzi-to-pinyin#readme",
   "dependencies": {
     "find-hanzi": "git+https://git@github.com/pepebecker/find-hanzi.git",
     "pinyin-utils": "git+https://git@github.com/pepebecker/pinyin-utils.git",
