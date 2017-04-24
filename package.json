@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test/index.js"
+    "test": "mocha -w"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,9 @@
     "find-hanzi": "git+https://git@github.com/pepebecker/find-hanzi.git",
     "pinyin-utils": "git+https://git@github.com/pepebecker/pinyin-utils.git",
     "so": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0",
+    "should": "^11.2.1"
   }
 }
