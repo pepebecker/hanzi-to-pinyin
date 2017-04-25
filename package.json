@@ -18,8 +18,7 @@
   "homepage": "https://github.com/pepebecker/hanzi-to-pinyin#readme",
   "dependencies": {
     "find-hanzi": "pepebecker/find-hanzi",
-    "pinyin-utils": "pepebecker/pinyin-utils",
-    "so": "^1.0.1"
+    "pinyin-utils": "pepebecker/pinyin-utils"
   },
   "devDependencies": {
     "mocha": "^3.3.0",
