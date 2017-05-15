@@ -1,5 +1,6 @@
 # Hanzi to Pinyin
 
+[![npm version](https://img.shields.io/npm/v/hanzi-to-pinyin.svg)](https://www.npmjs.com/package/hanzi-to-pinyin)
 [![Travis Build Status](https://travis-ci.org/pepebecker/hanzi-to-pinyin.svg)](https://travis-ci.org/pepebecker/hanzi-to-pinyin)
 [![Coverage Status](https://coveralls.io/repos/github/pepebecker/hanzi-to-pinyin/badge.svg)](https://coveralls.io/github/pepebecker/hanzi-to-pinyin)
 [![dependency status](https://img.shields.io/david/pepebecker/hanzi-to-pinyin.svg)](https://david-dm.org/pepebecker/hanzi-to-pinyin)
