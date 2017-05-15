@@ -10,7 +10,7 @@
 ## Install
 
 ```shell
-npm install hanzi-to-pinyin@pepebecker/hanzi-to-pinyin
+npm install hanzi-to-pinyin
 ```
 
 ## Usage
