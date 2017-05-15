@@ -22,6 +22,14 @@ convert('我的猫喜欢喝牛奶')
 .catch(console.error)
 ```
 
+## Related
+
+- [`pinyin-utils`](https://github.com/pepebecker/pinyin-utils)
+- [`pinyin-split`](https://github.com/pepebecker/pinyin-split)
+- [`find-hanzi`](https://github.com/pepebecker/find-hanzi)
+- [`pinyin-or-hanzi`](https://github.com/pepebecker/pinyin-or-hanzi)
+- [`pinyin-converter`](https://github.com/pepebecker/pinyin-converter)
+
 ## Contributing
 
 If you **have a question**, **found a bug** or want to **propose a feature**, have a look at [the issues page](https://github.com/pepebecker/hanzi-to-pinyin/issues).
