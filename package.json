@@ -1,7 +1,7 @@
 {
   "name": "hanzi-to-pinyin",
   "version": "1.0.0",
-  "description": "",
+  "description": "Convert Hanzi to Pinyin with tone marks.",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -12,8 +12,15 @@
     "type": "git",
     "url": "https://github.com/pepebecker/hanzi-to-pinyin.git"
   },
+  "keywords": [
+    "hanzi",
+    "pinyin",
+    "convert",
+    "chinese",
+    "mandarin"
+  ],
   "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pepebecker/hanzi-to-pinyin/issues"
   },
