@@ -30,6 +30,9 @@ convert('我的猫喜欢喝牛奶')
 - [`find-hanzi`](https://github.com/pepebecker/find-hanzi)
 - [`pinyin-or-hanzi`](https://github.com/pepebecker/pinyin-or-hanzi)
 - [`pinyin-convert`](https://github.com/pepebecker/pinyin-convert)
+- [`pinyin-bot-core`](https://github.com/pepebecker/pinyin-bot-core)
+- [`pinyin-telegram`](https://github.com/pepebecker/pinyin-telegram)
+- [`pinyin-messenger`](https://github.com/pepebecker/pinyin-messenger)
 
 ## Contributing
 
