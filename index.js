@@ -31,13 +31,23 @@ const getTokens = async text => {
 
 const convert = async (text, numbered) => {
 	const tokens = await getTokens(text)
-	if (numbered) {
-		return tokens.map(token => Object.keys(token.data))
-	}
-	return tokens.map(token => {
-		let keys = Object.keys(token.data)
-		return keys.map(key => token.data[key].mandarin)
-	})
+	return tokens.reduce((list, token) => {
+		if (typeof token === 'string') {
+			if (typeof list[list.length - 1] === 'string') {
+				list[list.length - 1] += token
+			} else {
+				list.push(token)
+			}
+		} else {
+			let pinyins = Object.keys(token.data)
+			if (numbered) {
+				list.push(pinyins)
+			} else {
+				list.push(pinyins.map(pinyin => token.data[pinyin].mandarin))
+			}
+		}
+		return list
+	}, [])
 }
 
 module.exports = convert
