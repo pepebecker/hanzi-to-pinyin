@@ -29,8 +29,11 @@ const getTokens = async text => {
 	return list
 }
 
-const convert = async text => {
+const convert = async (text, numbered) => {
 	const tokens = await getTokens(text)
+	if (numbered) {
+		return tokens.map(token => Object.keys(token.data))
+	}
 	return tokens.map(token => {
 		let keys = Object.keys(token.data)
 		return keys.map(key => token.data[key].mandarin)
