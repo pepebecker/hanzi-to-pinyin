@@ -22,7 +22,11 @@ const getTokens = async text => {
 			count--
 		}
 		if (!wordFound) {
-			list.push(text[index])
+			if (typeof list[list.length - 1] === 'string') {
+				list[list.length - 1] += text[index]
+			} else {
+				list.push(text[index])
+			}
 		}
 		index++
 	}
@@ -31,23 +35,18 @@ const getTokens = async text => {
 
 const convert = async (text, numbered) => {
 	const tokens = await getTokens(text)
-	return tokens.reduce((list, token) => {
+	return tokens.map(token => {
 		if (typeof token === 'string') {
-			if (typeof list[list.length - 1] === 'string') {
-				list[list.length - 1] += token
-			} else {
-				list.push(token)
-			}
+			return token
 		} else {
 			let pinyins = Object.keys(token.data)
 			if (numbered) {
-				list.push(pinyins)
+				return pinyins
 			} else {
-				list.push(pinyins.map(pinyin => token.data[pinyin].mandarin))
+				return pinyins.map(pinyin => token.data[pinyin].mandarin)
 			}
 		}
-		return list
-	}, [])
+	})
 }
 
 module.exports = convert
