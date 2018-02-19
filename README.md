@@ -1,10 +1,9 @@
 # Hanzi to Pinyin
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/hanzi-to-pinyin.svg)](https://greenkeeper.io/)
-
 [![npm version](https://img.shields.io/npm/v/hanzi-to-pinyin.svg)](https://www.npmjs.com/package/hanzi-to-pinyin)
 [![Travis Build Status](https://travis-ci.org/pepebecker/hanzi-to-pinyin.svg)](https://travis-ci.org/pepebecker/hanzi-to-pinyin)
 [![Coverage Status](https://coveralls.io/repos/github/pepebecker/hanzi-to-pinyin/badge.svg)](https://coveralls.io/github/pepebecker/hanzi-to-pinyin)
+[![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/hanzi-to-pinyin.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/pepebecker/hanzi-to-pinyin.svg)](https://david-dm.org/pepebecker/hanzi-to-pinyin)
 [![dev dependency status](https://img.shields.io/david/dev/pepebecker/hanzi-to-pinyin.svg)](https://david-dm.org/pepebecker/hanzi-to-pinyin#info=devDependencies)
 [![MIT-licensed](https://img.shields.io/github/license/pepebecker/hanzi-to-pinyin.svg)](https://opensource.org/licenses/MIT)
