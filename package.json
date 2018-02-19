@@ -1,38 +1,38 @@
 {
   "name": "hanzi-to-pinyin",
-  "version": "1.0.4",
+  "version": "1.0.9",
   "description": "Convert Hanzi to Pinyin with tone marks.",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha",
-    "cover": "istanbul cover _mocha",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+  "keywords": [
+    "chinese",
+    "convert",
+    "hanzi",
+    "mandarin",
+    "pinyin"
+  ],
+  "homepage": "https://github.com/pepebecker/hanzi-to-pinyin#readme",
+  "bugs": {
+    "url": "https://github.com/pepebecker/hanzi-to-pinyin/issues"
   },
+  "license": "MIT",
+  "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
+  "files": [],
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/pepebecker/hanzi-to-pinyin.git"
   },
-  "keywords": [
-    "hanzi",
-    "pinyin",
-    "convert",
-    "chinese",
-    "mandarin"
-  ],
-  "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pepebecker/hanzi-to-pinyin/issues"
+  "scripts": {
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "test": "mocha"
   },
-  "homepage": "https://github.com/pepebecker/hanzi-to-pinyin#readme",
   "dependencies": {
-    "find-hanzi": "^1.0.8",
-    "so": "^1.0.1"
+    "mdbg": "^1.0.3"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^5.0.0",
+    "mocha": "^5.0.1",
     "mocha-lcov-reporter": "^1.3.0",
     "should": "^13.2.1"
   }

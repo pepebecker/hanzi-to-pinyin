@@ -20,8 +20,8 @@ npm install hanzi-to-pinyin
 
 ```js
 const convert = require('hanzi-to-pinyin')
-convert('我的猫喜欢喝牛奶')
-.then(console.log) // wǒ de māo xǐ huān hē niú nǎi
+convert('我的猫喜欢吃苹果')
+.then(console.log) // [ ['wǒ'], ['de','dī','dí','dì'], ['māo'], ['xǐ huan'], ['chī'], ['píng guǒ'] ]
 .catch(console.error)
 ```
 
