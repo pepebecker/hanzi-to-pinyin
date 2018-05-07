@@ -2,7 +2,6 @@
 
 [![npm version](https://img.shields.io/npm/v/hanzi-to-pinyin.svg)](https://www.npmjs.com/package/hanzi-to-pinyin)
 [![Travis Build Status](https://travis-ci.org/pepebecker/hanzi-to-pinyin.svg)](https://travis-ci.org/pepebecker/hanzi-to-pinyin)
-[![Coverage Status](https://coveralls.io/repos/github/pepebecker/hanzi-to-pinyin/badge.svg)](https://coveralls.io/github/pepebecker/hanzi-to-pinyin)
 [![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/hanzi-to-pinyin.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/pepebecker/hanzi-to-pinyin.svg)](https://david-dm.org/pepebecker/hanzi-to-pinyin)
 [![dev dependency status](https://img.shields.io/david/dev/pepebecker/hanzi-to-pinyin.svg)](https://david-dm.org/pepebecker/hanzi-to-pinyin#info=devDependencies)
@@ -20,8 +19,8 @@ npm install hanzi-to-pinyin
 ```js
 const convert = require('hanzi-to-pinyin')
 convert('我的猫喜欢吃苹果')
-.then(console.log) // [ ['wǒ'], ['de','dī','dí','dì'], ['māo'], ['xǐ huan'], ['chī'], ['píng guǒ'] ]
-.catch(console.error)
+.then(console.log)
+// [ ['wǒ'], ['de','dī','dí','dì'], ['māo'], ['xǐ huan'], ['chī'], ['píng guǒ'] ]
 ```
 
 ## Related

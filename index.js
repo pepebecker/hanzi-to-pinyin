@@ -11,13 +11,15 @@ const getTokens = async text => {
 		let wordFound = false
 		while (count >= 0) {
 			word = word.substr(0, count)
-			const entry = mdbg.get(word)
-			if (entry) {
+			try {
+				const entry = await mdbg.get(word)
 				index += count - 1
 				entry.word = word
 				list.push(entry)
 				wordFound = true
 				break
+			} catch (err) {
+				if (err.type !== 'NotFoundError') console.error(err)
 			}
 			count--
 		}
@@ -39,11 +41,11 @@ const convert = async (text, numbered) => {
 		if (typeof token === 'string') {
 			return token
 		} else {
-			let pinyins = Object.keys(token.data)
+			let pinyins = Object.keys(token.definitions)
 			if (numbered) {
 				return pinyins
 			} else {
-				return pinyins.map(pinyin => token.data[pinyin].mandarin)
+				return pinyins.map(pinyin => token.definitions[pinyin].pinyin)
 			}
 		}
 	})
