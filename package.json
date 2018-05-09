@@ -25,7 +25,7 @@
     "test": "mocha --timeout 20000"
   },
   "dependencies": {
-    "mdbg": "^1.4.0"
+    "mdbg": "^1.7.0"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
