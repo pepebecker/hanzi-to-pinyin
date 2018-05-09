@@ -12,7 +12,7 @@ const getTokens = async text => {
 		while (count >= 0) {
 			word = word.substr(0, count)
 			try {
-				const entry = await mdbg.get(word)
+				const entry = await mdbg.getByHanzi(word)
 				index += count - 1
 				entry.word = word
 				list.push(entry)
