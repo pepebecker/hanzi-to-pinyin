@@ -25,7 +25,7 @@
     "test": "mocha --timeout 20000"
   },
   "dependencies": {
-    "hanzi-tokenizer": "^1.1.0"
+    "hanzi-tokenizer": "^1.2.0"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
