@@ -1,7 +1,7 @@
 {
   "name": "hanzi-to-pinyin",
   "version": "1.0.9",
-  "description": "Convert Hanzi to Pinyin with tone marks.",
+  "description": "Convert Hanzi to Pinyin with tone marks or tone numbers",
   "keywords": [
     "chinese",
     "convert",
@@ -25,7 +25,7 @@
     "test": "mocha --timeout 20000"
   },
   "dependencies": {
-    "hanzi-tokenizer": "^1.0.0"
+    "hanzi-tokenizer": "^1.1.0"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
