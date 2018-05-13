@@ -1,54 +1,46 @@
 'use strict'
 
-const mdbg = require('mdbg')
+const getTokens = require('hanzi-tokenizer')
 
-const getTokens = async text => {
-	let list = []
-	let index = 0
-	while (index < text.length) {
-		let word = text.substr(index)
-		let count = word.length
-		let wordFound = false
-		while (count >= 0) {
-			word = word.substr(0, count)
-			try {
-				const entry = await mdbg.getByHanzi(word)
-				index += count - 1
-				entry.word = word
-				list.push(entry)
-				wordFound = true
-				break
-			} catch (err) {
-				if (err.type !== 'NotFoundError') console.error(err)
-			}
-			count--
+const processToken = (token, numbered, segmented) => {
+	if (numbered) {
+		if (segmented) {
+			return Object.keys(token.definitions).map(v => v.replace(/\s/, ''))
+		} else {
+			return Object.keys(token.definitions)
 		}
-		if (!wordFound) {
-			if (typeof list[list.length - 1] === 'string') {
-				list[list.length - 1] += text[index]
-			} else {
-				list.push(text[index])
-			}
+	} else {
+		if (segmented) {
+			return Object.values(token.definitions).map(v => v.pinyin.replace(/\s/, ''))
+		} else {
+			return Object.values(token.definitions).map(v => v.pinyin)
 		}
-		index++
 	}
-	return list
 }
 
-const convert = async (text, numbered) => {
-	const tokens = await getTokens(text)
-	return tokens.map(token => {
-		if (typeof token === 'string') {
-			return token
-		} else {
-			let pinyins = Object.keys(token.definitions)
-			if (numbered) {
-				return pinyins
+const convert = async (text, opts = {}) => {
+	const tokens = await getTokens(text, Object.assign(opts, { spaces: true }))
+	const list = []
+	for (let i = 0; i < tokens.length; i++) {
+		if (typeof tokens[i] === 'string') {
+			if (typeof list[list.length - 1] === 'string') {
+				list[list.length - 1] += tokens[i]
 			} else {
-				return pinyins.map(pinyin => token.definitions[pinyin].pinyin)
+				list.push(tokens[i])
+			}
+		} else {
+			if (Object.keys(tokens[i].definitions).length === 1) {
+				if (typeof list[list.length - 1] === 'string') {
+					list[list.length - 1] += processToken(tokens[i], opts.numbered, opts.segmented)[0]
+				} else {
+					list.push(processToken(tokens[i], opts.numbered, opts.segmented)[0])
+				}
+			} else {
+				list.push(processToken(tokens[i], opts.numbered, opts.segmented))
 			}
 		}
-	})
+	}
+	return list
 }
 
 module.exports = convert
