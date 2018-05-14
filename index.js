@@ -44,3 +44,4 @@ const convert = async (text, opts = {}) => {
 }
 
 module.exports = convert
+module.exports.init = getTokens.init
